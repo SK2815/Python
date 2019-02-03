@@ -18,9 +18,16 @@ print("this is a string but I am adding 123 by using str function.. " + str(123)
 #local and global variables
 
 def localFunction():
+    #global f
     f = 'def'
     print(f)
 
 localFunction()
-#Above call will produce def but below print will print abc. 
+#Above call will produce def but below print will print abc if global is not used. Else, def
 print(f)
+#"global" keyword is used if you want to make the scope of that variable global
+
+#del deletes the variable definition
+del f
+print(f)
+#above statement will produce error (exception that f is not defined)
