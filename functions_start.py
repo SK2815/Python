@@ -27,3 +27,14 @@ print(power(2,3))
 
 print(power(x=3,num = 2))
 #so, x is written first, which was the second argument. But it didn't matter to python interpreter because we gave the name.
+
+#We can give multiple variables to function as arguments
+#This function will loop over each argument and will do something on that
+#NOTE: variable argument should always be the last parameter
+def multiAdd(*myargs):
+    result = 0
+    for i in myargs:
+        result = result + i
+    return result
+
+print(multiAdd(3,4,5,6))
